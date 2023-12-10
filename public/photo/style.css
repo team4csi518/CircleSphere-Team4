@@ -1,0 +1,134 @@
+/* Global styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+/* Header styles */
+header {
+  background-color: #121417; /* Darker background color */
+}
+
+/* Button styles */
+.btn {
+  cursor: pointer;
+}
+
+/* Upload container styles */
+.upload-container {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  border: 1px solid #555; /* Darker border color */
+  border-radius: 5px;
+  margin-bottom: 1em;
+  background-color: #121417; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+/* File input styles */
+.file-input {
+  display: none;
+}
+
+/* File label styles */
+.file-label {
+  cursor: pointer;
+  background-color: #877EFF; /* Bootstrap primary color */
+  color: #fff; /* Light text color */
+  margin-right: 1em; /* Add margin to separate the elements */
+}
+
+.file-label i {
+  margin-right: 0.5em;
+}
+
+.file-input:hover::before {
+  background-color: #0056b3; /* Darker hover color */
+}
+
+/* Photo grid styles */
+#photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+.grid-photo {
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Modal styles */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-photo {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styles */
+#upload-button {
+  margin-left: auto;
+}
+
+#photo-selected-message {
+  color: #4caf50; /* Bootstrap success color */
+}
+
+#photo-messages {
+  text-align: center;
+  margin: 1em auto;
+}
+
+/* Animation */
+@keyframes uploadcomplete {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Scrollbar styles for WebKit browsers */
+body::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #555; /* Darker color for the thumb */
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #333; /* Dark color for the track */
+}

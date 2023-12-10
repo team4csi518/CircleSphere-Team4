@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Main Container -->
+  <div id="about-container">
+
+    <!-- Profile Information Section -->
+    <div id="profile-info" class="flex-container">
+      <!-- Profile Photo Container -->
+      <div id="profile-photo-container">
+        <img id="profile-image" src="pp.png" alt="Profile Image">
+        <input type="file" id="file-input" style="display: none">
+        <button id="edit-photo-button" onclick="document.getElementById('file-input').click()">Edit Profile Photo</button>
+      </div>
+
+      <!-- Profile Details Container -->
+      <div id="profile-details" class="flex-grow">
+        <h1 id="full-name">Your Full Name</h1>
+        <p id="bio">A long bio about yourself.</p>
+        <p id="works-at">Works at: Your Workplace</p>
+        <p id="education-background">Education Background: Your Education</p>
+        <p id="university">University: Your University</p>
+        <p id="birthday">Birthday: Your Birthday</p>
+        <p id="lives-at">Lives at: Your City, Country</p>
+        <p id="from">From: Your Hometown</p>
+      </div>
+    </div>
+
+    <!-- Edit Section -->
+    <div id="edit-section" style="display: none;">
+      <label for="full-name-input">Full Name:</label>
+      <input type="text" id="full-name-input" placeholder="Enter your full name">
+
+      <label for="bio-input">Bio:</label>
+      <input type="text" id="bio-input" placeholder="Enter your new bio">
+
+      <label for="works-at-input">Works at:</label>
+      <input type="text" id="works-at-input" placeholder="Enter your workplace">
+
+      <label for="education-background-input">Education Background:</label>
+      <input type="text" id="education-background-input" placeholder="Enter your education background">
+
+      <label for="university-input">University:</label>
+      <input type="text" id="university-input" placeholder="Enter your university">
+
+      <label for="birthday-input">Birthday:</label>
+      <input type="text" id="birthday-input" placeholder="Enter your birthday">
+
+      <label for="lives-at-input">Lives at:</label>
+      <input type="text" id="lives-at-input" placeholder="Enter your city and country">
+
+      <label for="from-input">From:</label>
+      <input type="text" id="from-input" placeholder="Enter your hometown">
+
+      <button id="save-button" class="action-button">Save Changes</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form" style="display: none;">
+      <label for="login-full-name">Full Name:</label>
+      <input type="text" id="login-full-name" placeholder="Enter your full name">
+      <button id="login-submit" class="action-button" onclick="handleLogin()">Login</button>
+    </div>
+
+    <!-- Login and Edit Button -->
+    <button id="edit-button" class="action-button" onclick="toggleLoginEdit()">Login / Edit Profile</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
